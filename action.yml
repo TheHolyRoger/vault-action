@@ -1,0 +1,26 @@
+name: 'Start vault'
+description: 'Start vault'
+author: 'TheHolyRoger'
+branding:
+  icon: 'database'
+  color: 'green'
+inputs:
+  skip setcap:
+    description: 'Skip setcap'
+    required: false
+    default: 1
+  vault token:
+    description: 'vault token'
+    required: false
+    default: 'changeme'
+  vault dev root token id:
+    description: 'vault dev root token id'
+    required: false
+    default: 'changeme'
+  vault addr:
+    description: 'vault address'
+    required: false
+    default: 'http://127.0.0.1:8200'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
